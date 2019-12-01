@@ -3,6 +3,7 @@ package kr.co.tjoeun.a20191201_03_kotlinsyntex
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import kr.co.tjoeun.a20191201_03_kotlinsyntex.datas.User
 import kotlin.math.log
 
 class MainActivity : AppCompatActivity() {
@@ -28,5 +29,25 @@ class MainActivity : AppCompatActivity() {
         Log.d("로또번호 입력한 갯수","${lottoNumArr.size} 개 입력됨" )
 
 
+        val userList = ArrayList<User>()
+        val user1=User()
+        user1.name = "이규현"
+        user1.loginId="lkh"
+        userList.add(user1)
+
+        val user2 =User()
+        user2.name = "하하"
+        user2.loginId="st"
+        userList.add(user2)
+
+        Log.d("들어있는 사람수", "${userList.size} 명")
+        Log.d("1번칸에 있는 사람이름", "${userList.get(1).name}")
+
+        val user3 = User()
+        user3.name = "규현"
+        user3.loginId = "규효"
+
+        Log.d("규현이 있는 위치 ", "${userList.indexOf(user3)}")
+//        userList
     }
 }
