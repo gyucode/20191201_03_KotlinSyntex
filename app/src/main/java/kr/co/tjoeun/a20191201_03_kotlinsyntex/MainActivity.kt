@@ -72,6 +72,8 @@ class MainActivity : AppCompatActivity() {
             Log.d("뽑힌숫자","${i}")
         }
 
+        var user5:User? = null
+
 
     }
 }
